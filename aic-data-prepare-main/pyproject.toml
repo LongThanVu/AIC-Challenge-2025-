@@ -1,0 +1,20 @@
+[project]
+name = "aic-data-prepare"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "multilingual-clip>=1.0.10",
+    "numpy>=2.3.2",
+    "open-clip-torch>=3.1.0",
+    "psycopg2>=2.9.10",
+    "qdrant-client>=1.15.1",
+    "sqlalchemy>=2.0.43",
+    "transformers>=4.55.3",
+]
+
+[dependency-groups]
+dev = [
+    "jedi>=0.19.2",
+]

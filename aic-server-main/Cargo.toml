@@ -1,0 +1,32 @@
+[package]
+name = "aic-server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.99"
+axum = "0.8.4"
+deadpool-diesel = { version = "0.6.1", features = ["postgres"] }
+diesel = { version = "2.2.12", features = ["postgres"] }
+futures = "0.3.31"
+hf-hub = { version = "0.4.3", features = ["tokio"] }
+prost = "0.14.1"
+qdrant-client = "1.15.0"
+rayon = "1.11.0"
+serde = { version = "1.0.219", features = ["derive"] }
+tokenizers = "0.21.4"
+tokio = { version = "1.47.1", features = ["macros", "rt-multi-thread"] }
+tonic = "0.14.1"
+tonic-prost = "0.14.1"
+tower = "0.5.2"
+tower-http = { version = "0.6.6", features = ["cors", "trace"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+translators = { version = "0.1.5", features = ["google", "tokio-async"] }
+utoipa = "5.4.0"
+utoipa-axum = "0.2.0"
+utoipa-swagger-ui = { version = "9.0.2", features = ["axum"] }
+
+[build-dependencies]
+anyhow = "1.0.99"
+tonic-prost-build = "0.14.1"
